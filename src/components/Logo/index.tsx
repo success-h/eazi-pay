@@ -10,10 +10,10 @@ export const Logo: FC<LogoProps> = ({ className }) => {
   return (
     <Link href="/" className={clsx(`text-2xl`, className)}>
       <Image
-        width={158}
+        width={138}
         alt="Flashpay logo"
         className="h-full"
-        height={200}
+        height={100}
         src="/logo.svg"
       />
     </Link>

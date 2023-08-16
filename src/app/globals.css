@@ -1,10 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   color: #333333;
-  background: white;
+  background: #f4f4f4;
 }
 
 h1,
@@ -26,7 +31,7 @@ h1 {
 }
 
 h2 {
-  @apply mb-7 text-5xl font-bold  md:text-6xl;
+  @apply mb-7 text-4xl font-bold  md:text-7xl;
 }
 
 h4 {
@@ -37,7 +42,7 @@ h3 {
 }
 
 h5 {
-  @apply mb-4 md:text-2xl uppercase font-semibold;
+  @apply mb-4 md:text-xl font-semibold;
 }
 
 h6 {

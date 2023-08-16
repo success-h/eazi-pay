@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #333333;
+  background: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply prose;
+}
+
+body {
+  @apply text-black;
+}
+
+h1 {
+  @apply text-5xl font-bold lg:text-7xl my-4;
+}
+
+h2 {
+  @apply mb-7 text-5xl font-bold  md:text-6xl;
+}
+
+h4 {
+  @apply text-2xl lg:text-3xl font-semibold;
+}
+h3 {
+  @apply text-3xl lg:text-6xl font-semibold;
+}
+
+h5 {
+  @apply mb-4 md:text-2xl uppercase font-semibold;
+}
+
+h6 {
+  @apply font-semibold;
+}

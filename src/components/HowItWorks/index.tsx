@@ -16,6 +16,7 @@ export function HowItWorks() {
         width={1099}
         className="mx-auto my-20"
         alt="hero"
+        priority
       />
     </section>
   );

@@ -27,6 +27,7 @@ export function FreeForever() {
           width={800}
           className=""
           alt="hero"
+          priority
         />
       </div>
     </section>

@@ -10,6 +10,7 @@ export function Demo() {
         width={600}
         className="absolute top-0 right-1"
         alt="hero"
+        priority
       />
       <Image
         src="/demo-dots.svg"

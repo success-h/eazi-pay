@@ -18,6 +18,7 @@ export function Footer() {
           <span>
             <Logo className="bg-black" />
           </span>
+          ``
           <Link
             href="#"
             className="mt-4 link link-hover text-xs w-40 leading-loose"

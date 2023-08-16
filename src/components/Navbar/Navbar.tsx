@@ -79,11 +79,11 @@ export function Navbar() {
       </div>
 
       <div
-        className={`fixed menu overflow-auto -z-[1] right-0 left-0 top-0 bottom-0 bg-base-100 opacity-0 transition-opacity duration-300 pt-20 px-5 ${
+        className={`bg-white fixed menu overflow-auto -z-[1] right-0 left-0 top-0 bottom-0 opacity-0 transition-opacity duration-300 pt-20 px-5 ${
           isOpen ? "block opacity-100" : "hidden"
         } lg:hidden`}
       >
-        <div className="relative gap-7 cursor-pointer l:hidden">
+        <div className="flex flex-col items-start justify-start mt-10 relative gap-7 cursor-pointer lg:hidden">
           <Link href="#individuals" className="lg:hidden btn-ghost btn">
             Individual
           </Link>

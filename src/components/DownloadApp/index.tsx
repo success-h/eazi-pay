@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export function IOSDownload() {
   return (
-    <button className="btn h-20 card md:w-60 bg-white flex flex-row p-3 drop-shadow-2xl">
+    <button className="btn border-none outline-none h-20 card md:w-60 bg-white flex flex-row p-3 drop-shadow-2xl">
       <Image
         alt=""
         src="/ic_baseline-apple.svg"
-        className="rounded-full p-2 bg-gray-200 rounded-ful btn"
+        className="rounded-full p-2 bg-gray-200 rounded-ful"
         height={50}
         width={50}
       />
@@ -19,11 +19,11 @@ export function IOSDownload() {
 }
 export function PlaystoreDownload() {
   return (
-    <button className="btn h-20 card md:w-60 bg-white flex flex-row p-3 drop-shadow-2xl">
+    <button className="border-none outline-none btn h-20 card md:w-60 bg-white flex flex-row p-3 drop-shadow-2xl">
       <Image
         alt=""
         src="/logos_google-play-icon.svg"
-        className="rounded-full p-2 bg-gray-200 rounded-ful btn"
+        className="rounded-full p-2 bg-gray-200 rounded-ful"
         height={50}
         width={50}
       />

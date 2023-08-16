@@ -24,10 +24,10 @@ export function Form() {
         data-aos="fade-up"
         className="border border-gray-200 rounded-lg p-2 flex gap-2"
       >
-        <button className="btn bg-primary text-gray-200 hover:text-black rounded-lg flex-1 lowercase">
+        <button className="btn border-none outline-none bg-primary text-gray-200 hover:text-black rounded-lg flex-1 lowercase">
           Individual
         </button>
-        <button className="btn bg-gray-200 rounded-lg flex-1 lowercase">
+        <button className="btn border-none outline-none bg-gray-200 rounded-lg flex-1 lowercase">
           Company
         </button>
       </div>
@@ -38,7 +38,7 @@ export function Form() {
           key={idx}
           type={item.type}
           placeholder={item.name}
-          className="h-12 border border-gray-400 rounded-xl px-4 mt-6"
+          className="h-12 border bg-white border-gray-400 rounded-xl px-4 mt-6"
         />
       ))}
       <button

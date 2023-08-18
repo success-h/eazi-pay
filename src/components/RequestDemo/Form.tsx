@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { logIn, logOut, toggleModerator } from "@/redux/features/authSlice";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
+import { AppDispatch, useAppSelector } from "@/redux/store";
 
 const formData = [
   { name: "First Name", type: "text" },
@@ -16,6 +16,7 @@ const formData = [
 export function Form() {
   const [username, setUsername] = useState("");
   const dispatch = useDispatch<AppDispatch>();
+  const isAuth = useAppSelector((state) => state.authReducer.value.isAuth);
 
   const logout = () => {
     dispatch(logOut());
@@ -73,13 +74,15 @@ export function Form() {
       >
         Logout
       </button>
-      <button
-        data-aos="fade-up"
-        onClick={() => dispatch(toggleModerator())}
-        className="btn bg-info rounded-full mt-10 text-white hover:text-black"
-      >
-        Toggle modrator state
-      </button>
+      {isAuth && (
+        <button
+          data-aos="fade-up"
+          onClick={() => dispatch(toggleModerator())}
+          className="btn bg-info rounded-full mt-10 text-white hover:text-black"
+        >
+          Toggle modrator state
+        </button>
+      )}
     </div>
   );
 }

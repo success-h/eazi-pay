@@ -6,10 +6,16 @@ import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import clsx from "clsx";
 import { Logo } from "../Logo";
+import { useSelector } from "react-redux";
+import { useAppSelector } from "@/redux/store";
 
 export function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const username = useAppSelector((state) => state.authReducer.value.username);
+  const isModerator = useAppSelector(
+    (state) => state.authReducer.value.isModerator
+  );
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -53,13 +59,13 @@ export function Navbar() {
             Business
           </Link>
           <Link href="#pricing" className="max-lg:hidden btn-ghost btn">
-            Pricing
+            {isModerator && "Moderator"}
           </Link>
           <Link
             href="#set-your-payroll"
             className="max-lg:hidden btn-ghost btn"
           >
-            Set your payroll
+            {username}
           </Link>
         </div>
         <div className="flex gap-x-7 items-center">
